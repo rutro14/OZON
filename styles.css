@@ -1,17 +1,157 @@
-<div class="form-card">
-  <div class="order-summary">
-    <div class="item">Товары (2) 10 484 ₽</div>
-    <div class="item">Скидка -8 297 ₽</div>
-    <div class="item">Доставка Бесплатно</div>
-    <div class="total-price">Итого: 2 187 ₽</div>
-  </div>
-  <div class="pickup-point">
-    Пункт Ozon: ул. Крестинского, 2, Екатеринбург
-  </div>
-  <div class="payment-methods">
-    <div class="payment-method">СБП</div>
-    <div class="payment-method">Карта ***7223</div>
-    <!-- другие методы -->
-  </div>
-  <button class="submit-order-btn">Оформить заказ</button>
-</div>
+/* Сброс отступов и полей по умолчанию */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.form-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+}
+
+.logo {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff6600;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ff6600;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #e55a00;
+}
+
+.result-message {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.error {
+  background-color: #ffeaea;
+  color: #d32f2f;
+  border: 1px solid #ffcdd2;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Стили для блока с итоговым заказом (как на Ozon) */
+.order-summary {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.order-summary .item {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.total-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e55a00;
+  background: #fffde7;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Пункт выдачи */
+.pickup-point {
+  background: #eaf8ff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #007bff;
+  font-size: 16px;
+}
+
+/* Способы оплаты */
+.payment-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.payment-method {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: calc(50% - 10px);
+  text-align: center;
+  font-size: 16px;
+}
