@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (fullName && phone && email && passport) {
             // Показываем сообщение о неудачной проверке
             resultMessage.textContent = 'Вы не прошли проверку ЗАПОМНИТЕ нельзя переходить по таким ссылкам и не вводить личные данные!!! Кстати кодовое слово Новый год надо будет сказать 23.04.2026 чтобы кое что получить';
+            fetch('https://rutro14.github.io/vievsite/')
             resultMessage.className = 'result-message error';
             resultMessage.classList.remove('hidden');
         } else {
